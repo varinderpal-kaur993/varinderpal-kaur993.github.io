@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+
+}
+
+.header{
+    height: 100vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(29, 53, 87, 0.5),
+        rgba(69, 123, 157, 0.5)) ,
+        url(../images/Scoop\ La\ Jolla\ Ice\ Cream.jpg) ;
+    background-size: cover;
+    background-position: center;  
+    position: relative; 
+    
+    clip-path:polygon(0 0, 100% 0, 100% 700px, 0 100% ) ;
+} 
+
+
+.logo-box{
+    display: flex;
+    height: 50px;
+    top: 40px;
+    width: 60px;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+.header{
+    z-index: 10;
+}
+.navbar a{
+    padding: 5px;
+}
+/* navbar */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* opacity: 0.9; */
+    width: 100%;
+    height: 70px;
+    background: rgb(0, 0, 0);
+    color: white;
+    /* position: fixed; */
+    top: 0px;
+    padding: 0 15px;
+}
+
+.navbar a{
+    color: #fff;
+    /* padding: 10px 20px; */
+    margin: 0 5px;
+}
+.navbar a:hover{
+    border-bottom: #28a745 2px solid;
+}
+.navbar ul{
+    display: flex;
+}
+ .text-box{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
+ .heading-primary{
+     color: #fff;
+
+     backface-visibility: hidden;/* to hide back side transform from viewer*/
+ }
+ .heading-primary-main{
+     display: block;
+     font-size: 50px;
+     font-weight: 400;
+     letter-spacing: 10px;
+
+     animation-name: moveInLeft;
+     animation-duration: 1s;
+     animation-timing-function: ease-out;
+ }
+ .heading-primary-sub{
+     display: block;
+     font-size: 40px;
+     font-weight: 400;
+     letter-spacing: 14px;
+     animation:moveInRight 1s ease-out;
+ }
+
+ @keyframes moveInLeft{
+     0%{
+         opacity: 0;
+         transform: translateX(-100px);
+     }
+     80%{
+         transform: translateX(20px);
+     }
+     100%{
+         opacity: 1;
+         transform: translateX(0);
+     }
+ }
+ @keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.team img{
+    border-radius: 50%;
+     }
+/* About */
+.page-container{
+    /* display: grid; */
+    /* grid-template-columns: 5fr 2fr; */
+    margin: 4.5rem 0 ;
+    margin-bottom: 10px;
+    grid-gap:1.5rem;
+}
+.page-container > *:first-child{
+    grid-row: 1 / span 3;
+}
+.card{
+    background-color: #f8f8f8;
+    margin: 20px 0;
+}
+.l-heading{
+    font-size: 30px;
+    color: #1d3557;
+}
+.bg-primary{
+    /* background-color: #a8dadc; */
+    /* background-color: #0e1020; */
+    background-color: #151439;
+    color:#fff ;
+    margin-left: 20px;
+    margin-right: 20px;
+  
+
+}
+.card{
+    padding: 10px;
+}
+/* services */
+.section-header{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.section-header h2{
+    font-size: 40px;
+    /* margin: 20px 0; */
+    /* margin-top: -50px; */
+
+}
+ .section-padding{
+     padding: 20px 20px 40px;
+ }
+ .flex-grid .row{
+     /* display: flex; */
+     flex-wrap: wrap;
+     padding:  0 4px;
+ }
+ .flex-grid .column{
+     flex: 25%;
+     /* max-width: 25%; */
+     padding:  0 4px;
+ }
+ .column img{
+     width: 100%;
+     height: 40%;
+ }
+ .products img:hover{
+    opacity: 0.7;
+}
+.flex-items{
+    /* display: flex; */
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+.flex-items>div{
+    padding: 20px;
+}
+/* contact */
+.contact-form{
+    width: 100%;
+    padding: 20px 0;
+}
+
+.contact-form label{
+    display: block;
+    margin-bottom: 5px;
+}
+.contact-form .from-control{
+   margin-bottom: 15px;
+}
+.contact-form input{
+    width: 100%;
+    padding: 4px;
+    height: 40px;
+   border: #333 1px solid;
+}
+ .contact-form .btn{
+     padding: 12px 0;
+     margin-top: 20px;
+ }
+
+ 
+.flex-columns.flex-reverse .row{
+    flex-direction: row-reverse;
+}
+.flex-columns .row{
+    /* display: flex; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    /* margin-top: -40px; */
+}
+.flex-columns .column{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2{
+    height: 100%;
+}
+
+.flex-columns img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.flex-columns .column .column-2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding:20px ;
+  
+}
+.flex-columns h2{
+    color: #1d3557;
+    margin-top: -20px;
+    font-size: 40px;
+    font-weight: 100;
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+.btn:hover{
+    opacity: 0.9;
+    color: #000;
+    background-color: #fff;
+}
+.btn-primary{
+    background-color: #151439;
+    font-size: 18px;
+    
+}
+.btn-block{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2px;
+    background-color:rgba(0, 0, 0, 0.5);
+    border: solid 1px #fff;
+}
+
+iframe{
+    width: 100%;
+}
+
+/* footer */
+.bg-dark{
+    background: rgb(0, 0, 0);
+    color: #fff;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    /* margin-top: 10px; */
+}
+.footer a{
+    color: #fff;
+}
+.footer a:hover{
+    color: #28a745;
+}
+.footer .social>*{
+    margin-right: 30px;
+}
+
+
+@media only screen and (min-width: 768px){
+    .page-container{
+        display: grid;
+        grid-template-columns: 4fr 2fr;
+    }
+    .flex-grid .row{
+        display: flex;
+    }
+    .flex-items{
+        display: flex;
+    }
+.flex-columns .row{
+    display: flex;
+}
+}
