@@ -34,6 +34,9 @@ body{
     top: 40px;
     width: 60px;
 }
+.logo{
+    width: 40px;
+}
 ul{
     list-style: none;
 }
