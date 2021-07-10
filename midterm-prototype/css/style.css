@@ -6,7 +6,7 @@
 body{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.7;
     color: #777;
 
@@ -84,10 +84,10 @@ a{
      transform: translate(-50%, -50%);
  }
  .text-primary{
-     text-align: center;
      font-weight: bold;
-     color: #000;
+     color: #1d3557;
      font-style: italic;
+     padding: 0 20px;
  }
  .heading-primary{
      color: #fff;
@@ -98,7 +98,6 @@ a{
      font-size: 50px;
      font-weight: 400;
      letter-spacing: 10px;
-
      animation-name: moveInLeft;
      animation-duration: 1s;
      animation-timing-function: ease-out;
@@ -185,8 +184,9 @@ a{
 
 }
  .section-padding{
-     padding: 20px 0 20px 0 ;
-     margin-bottom: -30px;
+
+   margin: 0 20px;
+
  }
  .flex-grid .row{
      flex-wrap: wrap;
@@ -194,6 +194,7 @@ a{
  }
  .flex-grid .column{
      flex: 25%;
+     max-height: 25%;
      padding:  0 4px;
  }
  .column img{
@@ -205,6 +206,7 @@ a{
 }
 .flex-items{
     display: flex;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
     text-align: center;
@@ -254,6 +256,7 @@ textarea{
 .flex-columns .column{
     display: flex;
     flex-direction: column;
+    margin: 0 20px;
     flex-basis: 100%;
     flex: 1;
 }
@@ -271,11 +274,10 @@ textarea{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding:20px ;
 }
 .flex-columns h2{
     color: #1d3557;
-    margin-top: 10px;
+
     font-size: 40px;
     font-weight: 100;
 }
@@ -328,13 +330,7 @@ textarea{
     margin-right: 30px;
 }
 @media only screen and (min-width: 768px){
-    .column-2 h2{
-        margin-top: -10px;
-    }
-    .page-container{
-        display: grid;
-        grid-template-columns: 4fr 2fr;
-    }
+   
     .text-primary{
     font-size: 20px;
 
@@ -344,8 +340,24 @@ textarea{
     }
     .flex-items{
         display: flex;
+        flex-direction: row;
     }
 .flex-columns .row{
     display: flex;
+    }
+   
 }
+@media only screen and (min-width: 1024px){
+    .about-container{
+        max-width: 1200px;
+        width: 1000px;
+        margin: auto;
+    }
+    .page-container{
+        display: grid;
+        grid-template-columns: 4fr 2fr;
+    }
+    .section-padding{
+        margin-bottom: 50px;
+    }
 }
