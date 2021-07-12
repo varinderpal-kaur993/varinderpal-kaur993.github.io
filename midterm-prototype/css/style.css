@@ -13,16 +13,15 @@ body{
 }
 .header{
     height: 100vh;
-    background-image: linear-gradient(
+    background-image: linear-gradient(/* to set background image*/
         to right bottom,
         rgba(29, 53, 87, 0.5),
         rgba(69, 123, 157, 0.5)) ,
-        url(../images/Scoop\ La\ Jolla\ Ice\ Cream.jpg) ;
-    background-size: cover;
+        url(../images/Scoop\ La\ Jolla\ Ice\ Cream.jpg) ;/* Apply gradient to background image*/
+    background-size: cover; /* Specifies the size of the background images*/
     background-position: center;  
     position: relative; 
-    
-    clip-path:polygon(0 0, 100% 0, 100% 700px, 0 100% ) ;
+    clip-path:polygon(0 0, 100% 0, 100% 700px, 0 100% ) ;/*Specifies a clipping path where everything inside the path is visible and everything outside is clipped out.*/
 } 
 .header-1{
     height: 50vh;
@@ -32,7 +31,7 @@ body{
     position: relative; 
 }
 .logo-box{
-    display: flex;
+    display: flex;/* to display flex*/
     height: 50px;
     top: 40px;
     width: 60px;
@@ -47,7 +46,7 @@ a{
     text-decoration: none;
 }
 .header{
-    z-index: 10;
+    z-index: 10; /* 'z-index' property specifies the stack level*/
 }
 .navbar a{
     padding: 5px;
@@ -55,20 +54,17 @@ a{
 /* navbar */
 .navbar{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+    align-items: center; /*Aligns flex items along the cross axis of the current line of the flex container.*/
+    justify-content: space-between; /* Aligns flex items along the main axis of the current line of the flex container*/
     width: 100%;
     height: 70px;
     background: rgb(0, 0, 0);
     color: white;
-
     top: 0px;
     padding: 0 15px;
 }
 .navbar a{
     color: #fff;
-
     margin: 0 5px;
 }
 .navbar a:hover{
@@ -99,8 +95,8 @@ a{
      font-weight: 400;
      letter-spacing: 10px;
      animation-name: moveInLeft;
-     animation-duration: 1s;
-     animation-timing-function: ease-out;
+     animation-duration: 1s; /* Defines the length of time that an animation takes to complete one cycle*/
+     animation-timing-function: ease-out;/*Describes how the animation will progress over one cycle of its duration*/
  }
  .heading-primary-sub{
      display: block;
@@ -113,7 +109,7 @@ a{
  @keyframes moveInLeft{
      0%{
          opacity: 0;
-         transform: translateX(-100px);
+         transform: translateX(-100px);/* A two-dimensional transformation is applied to an element through the 'transform' property*/
      }
      80%{
          transform: translateX(20px);
@@ -138,9 +134,9 @@ a{
 }
 .team img{
     border-radius: 50%;
-    height: 20vh;
-    width: 30vh;
-     }
+    height: 70%;
+    width: 300px;
+}
 /* About */
 
 .page-container{
@@ -173,27 +169,24 @@ a{
 .section-header{
     padding: 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*  to set the direction of the flex container’s main axis*/
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 .section-header h2{
     font-size: 40px;
-
-
 }
  .section-padding{
-
    margin: 0 20px;
 
  }
  .flex-grid .row{
-     flex-wrap: wrap;
+     flex-wrap: wrap;/* to wrap flex items*/
      padding:  0 4px;
  }
  .flex-grid .column{
-     flex: 25%;
+     flex: 25%;/* flexible lenght */
      max-height: 25%;
      padding:  0 4px;
  }
@@ -267,7 +260,7 @@ textarea{
 .flex-columns img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover;/* Specifies how the contents of a replaced element should be scaled relative to the box established by its used height and width.*/
 }
 .flex-columns .column .column-2{
     display: flex;
@@ -277,7 +270,6 @@ textarea{
 }
 .flex-columns h2{
     color: #1d3557;
-
     font-size: 40px;
     font-weight: 100;
 }
@@ -329,11 +321,10 @@ textarea{
 .footer .social>*{
     margin-right: 30px;
 }
+/* media queries for tablet */
 @media only screen and (min-width: 768px){
-   
     .text-primary{
     font-size: 20px;
-
     }
     .flex-grid .row{
         display: flex;
@@ -344,13 +335,13 @@ textarea{
     }
 .flex-columns .row{
     display: flex;
-    }
-   
+    } 
 }
-@media only screen and (min-width: 1024px){
+/* media query for web */
+@media only screen and (min-width: 1300px){
     .about-container{
         max-width: 1200px;
-        width: 1000px;
+        width: 1100px;
         margin: auto;
     }
     .page-container{
