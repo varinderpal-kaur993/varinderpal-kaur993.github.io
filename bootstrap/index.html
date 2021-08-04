@@ -10,9 +10,10 @@
 
 
 <body>
+    <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"><!--to fix nav at top-->
+            <div class="container-fluid"><!--To give full width-->
               <a class="navbar-brand" href="#">Navbar</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,7 +23,7 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
-                  <li><button class="btn btn-dark btn-lg">613 668 5887</button></li>
+                  <li><button class="btn btn-dark btn-lg">613 668 5887</button></li><!-- Display button with dark background -->
                 </ul>
               </div>
             </div>
@@ -31,6 +32,7 @@
 
 <div class="pb-5 mb-4 bg-dark text-white rounded-3">
     <div class="container-fluid py-5 text-center">
+        <!-- jumbotron button -->
         <h1 class="display-5 fw-bold mt-5">Custom jumbotron</h1>
         <p> A jumbotron indicates a big grey box for calling extra attention to some special content or information. </p>
         <button type="button" class="btn btn-info">Learn Jumbotron</button>
@@ -47,17 +49,16 @@
             <li> Container-{breakpoint}</li>
             </ol>
          </div>
-         <div class="container mb-3"> 
+         <div class="container mb-3"> <!-- mb used for margin bottom -->
             <div class="container-xl">
-                <div class="card">
+                <div class="card"><!-- used to display flexible content -->
                     <div class="card-body"> 
                         <h2>Card</h2>
                         <p>
                         A card is a flexible and extensible content container with various options like header, footer, powerfull display otions, contextual bg-colors and wide varity of content.
                         </p>
                         <p>
-                            Cards support a wide varity of content including images, text, list groups, links and so on.</p>
-                           
+                            Cards support a wide varity of content including images, text, list groups, links and so on.</p>   
                             <div>1. card-body</div>
                             this is known as building block of a card.
                             <div>2. card-title</div>
@@ -71,6 +72,7 @@
                 </div> 
             </div>
         </div>
+        <!-- grid -->
         <div id="grid" class="container bg-info">
             <div class="row pt-3">
                 <div class="col-12 col-lg-4">
@@ -94,7 +96,7 @@
                 <h2 class="text-center">For alignment of text</h2>
                 <p class="text-center">Text is easy tio realign with the use of text alignment classes</p>
             </header>
-            <div class=" bg-primary p-4">
+            <div class=" bg-primary p-4"><!-- for background color to be primary -->
                 <h2>Utilities</h2>
                 <h4>Background Color</h4>
                 <p class="fs-5">Background color is one of the option of uti;ities of bootstrap. FS-5 is used for font-size</p>
@@ -112,7 +114,6 @@
                         <li>Light</li>
                         <li>Dark</li>
                     </ol>
-               
                 <button type="button" class="btn btn-dark btn-lg">Dark</button> 
             </div>
         </section>
@@ -133,6 +134,7 @@
         </div>
         <button type="button" class="btn btn-primary btn-lg ms-4">Submit</button>
     </div>
+    <!-- footer with dark background -->
     <footer class="container-fluid bg-dark text-white mt-3 p-4">
         <p class="text-center fs-5">Copyright &copy;1997 | Batth</p>
         <div class="text-center fs-5">
