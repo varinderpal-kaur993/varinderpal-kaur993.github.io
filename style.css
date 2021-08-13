@@ -3,21 +3,25 @@
     padding: 0;
     box-sizing: inherit;
 }
+/* HTML */
 html{
     box-sizing: border-box;
     font-size: 62.5%;
 }
+/* BODY */
 body{
     font-family: 'Nunito', sans-serif;
     color:#6d5d4b;
     font-weight:300;
     line-height: 1.6;
 }
+/* CONTAINER */
 .container{
     display: grid;
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-    grid-template-columns: [sidebar-start] 10rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8,  [col-start]  minmax(min-content, 14rem) [col-end] )  [center-end] minmax(6rem, 1fr) [full-end] ;
+    grid-template-columns: [sidebar-start] 10rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start]  minmax(min-content, 14rem) [col-end] )  [center-end] minmax(6rem, 1fr) [full-end] ; /*specifies, as a space-separated track list, the line names and track sizing functions of the grid.*/
 }
+/* SIDEBAR */
 .sidebar{
     background-color: #c69963;
     grid-column: sidebar-start / sidebar-end ;
@@ -26,6 +30,7 @@ body{
     justify-content: center;
     font-family:'Josefin Sans', sans-serif ;
 }
+/* SIDE NAV */
 .side-nav{
     margin-top: 2.5rem;
     font-size: 1.5rem;
@@ -36,9 +41,10 @@ body{
 .side-nav__link{
     color: #333;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: uppercase; /* to make capitalization an element’s text.*/
  
 }
+/* HEADER */
 .header{
     background-color: #54483a;
     grid-column: full-start / col-end 6;
@@ -47,8 +53,8 @@ body{
     to right bottom,
     rgba(6.3, 11.4, 17.3, 0.93),
     rgba(6.2, 11.4, 17.3, 0.6)),
-    url(./images2/Kaur_V_2.jpg);
-    background-size: cover;
+    url(./images2/Kaur_V_2.jpg);/* Apply gradient to background image*/
+    background-size: cover; /* specifies size if images*/
     background-position: center;
     padding: 8rem;
     padding-top: 4rem;
@@ -59,7 +65,7 @@ body{
     grid-row-gap: 1.5rem;
     justify-content: center;
 }
-
+/* LOGO */
 .header__logo{
     height: 3rem;
     justify-self: center;
@@ -67,7 +73,6 @@ body{
 .lead{
     font-size:3.5rem;
     color: #fff;
-
 }
 .header__btn{
     align-self: start;
@@ -93,7 +98,7 @@ body{
         transform: translateX(0);
     } 
 }
-
+/* PEOPLE */
 .people{
     background-color: #101d2c;
     grid-column: col-start 7 / full-end;
@@ -105,6 +110,7 @@ body{
     justify-items: center;
     grid-row-gap: 2rem;
 }
+/* PERSON */
 .person{
     display: grid;
     grid-template-columns: min-content max-content;
@@ -117,6 +123,7 @@ body{
     border-radius: 30%;
     display: block;
 }
+/* FEATURES */
 .features{
     grid-column: center-start / center-end;
     margin:15rem 0;
@@ -140,6 +147,10 @@ body{
 } a.feature-text{
     text-decoration: none;
 }
+.feature-text{
+    font-size: 2rem;  
+}
+/* HEADINGS */
 .heading-1{
     font-size: 4.5rem;
     color: #f9f7f6;
@@ -164,6 +175,7 @@ body{
     font-size: 2.9rem;
     color: #54483a;
 }
+/* BUTTON */
 .btn{
     background-color: #c69963;
     color: #fff;
@@ -179,16 +191,14 @@ body{
 .btn:hover{
     background-color: #828451;
 }
-.feature-text{
-    font-size: 2rem;  
-}
+/* STORY PICTURE */
 .story__pictures{
     background-color: #c69963;
     grid-column: full-start / col-end 4;
     background-image:  linear-gradient(/* to set background image*/
     to right bottom,
     rgba(189, 156, 137, 0.5),
-    rgba(197, 134, 97, 0.5)) , url(images2/Kaur_V_4.jpg);
+    rgba(197, 134, 97, 0.5)) , url(images2/Kaur_V_4.jpg);/* Apply gradient to background image*/
     background-size:cover ;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
@@ -199,7 +209,6 @@ body{
     width: 100%;
     grid-row: 2 / 6;
     grid-column: 2 / 6;
-
 }
 .story-img-2{
     width: 100%;
@@ -207,6 +216,7 @@ body{
     grid-column: 4 /7;
     z-index: 20;
 }
+/* STORY CONTENT */
 .story--content{
     background-color: #f9f7f6;
     grid-column: col-start 5 / full-end;
@@ -223,9 +233,8 @@ body{
     font-style: italic;
     margin-bottom: 4rem;
 }
-
+/* HOMES */
 .homes{
-   
     grid-column: center-start / center-end;
     margin: 15rem 0;
     display: grid;
@@ -236,7 +245,6 @@ body{
     background-color: #aaa;
     display: grid;
     grid-template-columns: 1fr 1fr;
- 
 }
 .home-img{
     width: 100%;
@@ -246,8 +254,8 @@ body{
 .home-name{
     grid-row: 1 / 2;
     grid-column: 1 / -1;
-    justify-self: center;
-    align-self: end;
+    justify-self: center;/*sets the way a box is justified inside its alignment container along the appropriate axis.*/ 
+    align-self: end;/*Allows the default alignment along the cross axis to be overridden for individual flex items.*/
     z-index: 3;
     width: 80%;
     font-family: 'Josefin Sans', sans-serif ;
@@ -257,9 +265,9 @@ body{
     background-color: #101d2c;
     color: #fff;
     font-weight: 400;
-    transform: translateY(50%);  
+    transform: translateY(50%); /* to set two-dimensional transformation through the 'transform' property*/ 
 }
-
+/* GALLERY */
 .gallery{
     background-color: #f9f7f6;
     grid-column: full-start / full-end;
@@ -277,8 +285,8 @@ body{
 }
 .text-center{
     text-align: center;
-    grid-row: 8 / span 9;
-    grid-column: 3 / span 4;
+    grid-row: 8 / span 9;/*Shorthand for 'grid-row-start' and 'grid-row-end'.*/
+    grid-column: 3 / span 4;/*Shorthand for 'grid-column-start' and 'grid-column-end'*/
 }
  .gallery__item:hover{
     opacity: 0.7;
@@ -345,8 +353,8 @@ body{
     height: 100%;
     object-fit: cover;
     display: block; 
-} 
-
+}
+ /*FOOTER  */
 .footer{
     background-color: #101d2c;
     grid-column: full-start / full-end;
@@ -356,7 +364,7 @@ body{
 }
 .footer{
     align-items: center;
-    justify-content: center;
+    justify-content: center;/*Aligns flex items along the main axis of the current line of the flex container.*/
     text-align: center;
     height: 200px;
 }
@@ -378,6 +386,7 @@ footer p{
 .footer .social>*{
     margin-right: 30px;  
 }
+/* MEDIA QUERIES */
  @media only screen and (max-width: 425px){
      .header{
         padding: 5rem;
