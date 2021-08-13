@@ -137,6 +137,8 @@ body{
    font-size: 4.5rem;
    grid-row: 1 / span 2;
    transform:translateY(-1rem) ;
+} a.feature-text{
+    text-decoration: none;
 }
 .heading-1{
     font-size: 4.5rem;
@@ -204,7 +206,6 @@ body{
     grid-row: 4 /6 ;
     grid-column: 4 /7;
     z-index: 20;
-    /* box-shadow: 0 2rem 5rem rgba(#000 .2); */
 }
 .story--content{
     background-color: #f9f7f6;
@@ -369,7 +370,7 @@ footer p{
     font-size: 2.5rem;
 }
 .footer a:hover{
-    color: #a9a5e2;
+    color: #574302;
 }
 .social{
     margin-top: 60px;
@@ -377,7 +378,7 @@ footer p{
 .footer .social>*{
     margin-right: 30px;  
 }
- @media only screen and (max-width: 600px){
+ @media only screen and (max-width: 425px){
      .header{
         padding: 5rem;
     }
@@ -387,6 +388,7 @@ footer p{
     div.person{
         grid-template-columns: min-content max-content;
     }
+   
     @keyframes typing {
         0%{
             opacity: .3;
@@ -437,6 +439,10 @@ footer p{
         grid-row: 1 / -1;
         width: 100%;
         grid-gap: 2rem;
+    }
+  
+    .homes .home:nth-child(2){
+        display: none;
     }
 } 
 
